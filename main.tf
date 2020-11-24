@@ -40,3 +40,12 @@ module "deploy_vnet" {
     resource_group_name     = module.deploy_resource_group.name 
     address_space           = ["192.168.0.0/24"]
 }
+
+# Create Subnet in vm-project-vnet
+module "deploy_subnet" {
+    source                  = "./modules/subnet"
+    name                    = "${var.project_prefix}-subnet"
+    resource_group_name     = module.deploy_resource_group.name 
+    virtual_network_name    = module.deploy_vnet.name 
+    address_prefixes        = ["192.168.0.0/26"]
+}
