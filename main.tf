@@ -16,14 +16,14 @@ data "azurerm_storage_account" "storage" {
 }
 
 # Configure backend remote state
-/*terraform {
+terraform {
   backend "azurerm" {
     resource_group_name     = "remote-state"
     storage_account_name    = "hakanstorage1"
     container_name          = "tfstate"
     key                     = "vm.tfstate"        
   }
-}*/
+}
 
 module "deploy_resource_group" {
     source                  = "./modules/resource-group"
