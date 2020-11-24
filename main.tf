@@ -25,8 +25,18 @@ terraform {
   }
 }
 
+# Create Resource Group for vnet,subnet,nsg and virtual machine 
 module "deploy_resource_group" {
     source                  = "./modules/resource-group"
     name                    = "${var.project_prefix}-rg"
     location                = var.location    
+}
+
+# Create Virtual Network in US West 2
+module "deploy_vnet" {
+    source                  = "./modules/vnet"
+    name                    = "${var.project_prefix}-vnet"
+    location                = var.location
+    resource_group_name     = module.deploy_resource_group.name 
+    address_space           = ["192.168.0.0/24"]
 }

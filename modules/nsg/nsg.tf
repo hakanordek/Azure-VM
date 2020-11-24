@@ -5,8 +5,6 @@ variable "rule_name" {}
 variable "priority" {}
 variable "access" {}
 
-
-
 resource "azurerm_network_security_group" "nsg" {
     name                            = var.name
     location                        = var.location
