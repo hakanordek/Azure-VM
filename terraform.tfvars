@@ -1,4 +1,5 @@
 storage_account_name        = "forstore"
 storage_rg                  = "remote-state"
+vault                       = "forvault"
 project_prefix              = "vm-project"
 location                    = "West US 2"

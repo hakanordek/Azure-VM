@@ -7,6 +7,11 @@ variable "storage_rg" {
     description         = "Resource group name of storage account where state file stored"
 }
 
+variable "vault" {
+    type                = string
+    description         = "Key vault name that stores keys"
+}
+
 variable "project_prefix" {
     type                = string
     description         = "Project prefix"
