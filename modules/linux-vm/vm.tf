@@ -9,7 +9,6 @@ variable "size" {}
 variable "admin_username" {}
 variable "admin_password" {}
 variable "network_interface_ids" {}
-#variable "public_key" {}
 variable "caching" {}
 variable "storage_account_type" {}
 variable "publisher" {}
