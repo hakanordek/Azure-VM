@@ -19,7 +19,7 @@ data "azurerm_storage_account" "storage" {
 terraform {
   backend "azurerm" {
     resource_group_name         = "remote-state"
-    storage_account_name        = "hakanstorage1"
+    storage_account_name        = "forstore"
     container_name              = "tfstate"
     key                         = "vm.tfstate"        
   }
